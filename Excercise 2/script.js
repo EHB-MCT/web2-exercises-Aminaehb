@@ -1,7 +1,9 @@
 "use strict";
+import Team from './team';
+import team from './team'
 
-
-const list = [];
+let list = [];
+let pokemon = [];
 
 function getData() {
     //get the list
@@ -12,7 +14,7 @@ function getData() {
         }).then(data => {
             list = data.results;
             for (let element of list)(
-                fetch(element).then(response => {
+                fetch(element.url).then(response => {
                     return response.json();
                 }).then(data => {
                     pokemon.push(data);
@@ -20,18 +22,17 @@ function getData() {
                 })
             )
 
-            function List() {
-                let html = `<article>
-    <div class="pokemon">
-        <h2 class="title">Bulbasaur</h2>
-        <img class="img" src="https://pokeapi.co/api/v2/pokemon/9/" alt="">
-        <p class="text">Grass</p>
-        <p class="text2">Poison</p>
-    </div>
-</article>`
+            function list() {
+                let html = ` <div class="pokemon">
+                <h2 class="title"></h2>
+                <img class="img" src=" " alt="">
+                <p class="text"></p>
+                </div>`
             };
+            document.getElementById("list").insertAdjacentHTML("beforeend", html);
         })
-
+let team1 = new Team;
 }
 window.onload = Function();
+
 getData();
