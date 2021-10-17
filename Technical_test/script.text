@@ -1,0 +1,34 @@
+fetch = asynchrone javascript --> it asks to retrieve data
+      = async function returns a Promise object.
+const = (constant) defines a variable as unchangeable --> document.getElementById = img (id in html)
+
+
+STEP 1: try to see if it console.logs
+--> it worked!
+
+STEP 2: I first made a simple fetch code to see if my api url can get fetched
+etch the api
+      1. first fetch the api
+      2. then a promise (.then) --> consolelog response = reponse in console = false
+      3. convert into json response = response.json
+      4. to catch errors is also very important = promise .catch the error and when we consolelog it I need to see the word "ERROR"
+--> it never worked = it woudl always say (response undefined) or {"message":"You are not authorized."}
+--> which I think means I need to be a member of the group
+
+=> just to see if there wasn'y a problem with my console I made a new fetch api with random pictures of cats
+
+STEP 3: first I am gonna try it with an api that gives random picturs of cats 
+      1. async function = getRandomPictures --> declare also underneath in the code 
+      2. then fetch the api
+      3. first promise (.then) --> consolelog response = reponse in console = true = url
+      4. convert into json response = response.json
+      5. second promise (.then) --> consolelog the data  => in console we got a first object
+      6. now that i see a url in the console we need to return the data of that url in our id (img)
+      7. img source = the first object in the console data = [O].url) --> with that we have our picture
+      8. to catch errors is also very important = promise .catch the error and when we consolelog it I need to see the word "ERROR"
+--> it worked = everytime you reload the page you see random pictures of cats
+
+
+
+
+
