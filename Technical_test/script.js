@@ -1,51 +1,19 @@
-// STEP 1
-// console.log("Hello World")
+const client = filestack.init('AxN8ROZz3T8azRC4SxHcQz');
+const api = ('https://www.filestackapi.com/api/file');
+const options = {
+    fromSources: ["local_file_system", "instagram", "facebook"],
+    accept: ["image/*"],
+    uploadConfig: {
+        retry: 5,
+        timeout: 60000
+    },
+    onFileSelected: file => {
+        // If you throw any error in this function it will reject the file selection.
+        // The error message will be displayed to the user as an alert.
+        if (file.size > 1000 * 1000) {
+            throw new Error('File too big, select something smaller than 1MB');
+        }
+    }
+};
 
-// STEP 2
-
-//"use strict";
-
-//fetch('')
-//.then(response => {
-// console.log(response)
-// response.json
-//})
-//:.then(data => {
-//     console.log(data);
-// })
-//.catch(error => {
-//    console.log('ERROR');
-// })
-
-// api from https://gyazo.com/ = nothing works because I think I need to be a member of it
-//The API request to get a list of a user’s saved images.
-//fetch('https://api.gyazo.com/api/images')
-//{"message":"You are not authorized."}
-
-
-//This API provides the information of the authenticated user.
-//fetch('https://api.gyazo.com/api/users/me')
-//response undefined
-
-//This API provide image's raw URL.
-//fetch('http://i.gyazo.com/8c9d9c8ec14dec4631b6ec77d1c85450_1.png')
-// response = acces to fetch
-
-
-// STEP 3
-"use strict";
-
-const img = document.getElementById('img');
-
-async function getRandompictures() {
-    let response = await fetch('https://api.thecatapi.com/v1/images/search') // = GET request --> we take the data from that API 
-        .then(response => response.json())
-        .then(data => {
-            img.src = data[0].url
-            //console.log(data);
-        })
-        .catch(error => {
-            console.log('ERROR');
-        })
-}
-getRandompictures();
+client.picker(options).open();

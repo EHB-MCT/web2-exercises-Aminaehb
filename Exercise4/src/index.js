@@ -1,0 +1,1 @@
+const variableName = require('package.json');
