@@ -1,1 +1,2 @@
-const client = require('filestack-js').init('apikey');
+const client = require('filestack-js').init('AxN8ROZz3T8azRC4SxHcQz');
+export default Filestack;

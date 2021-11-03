@@ -1,0 +1,19 @@
+{
+  "name": "technical_test",
+  "version": "1.0.0",
+  "description": "filestack",
+  "main": "filestack-js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Amina Amzou",
+  "license": "ISC",
+  "dependencies": {
+    "filestack-js": "^3.25.0",
+    "filestack-react": "^4.0.1"
+  },
+  "devDependencies": {
+    "webpack": "^5.61.0",
+    "webpack-cli": "^4.9.1"
+  }
+}
