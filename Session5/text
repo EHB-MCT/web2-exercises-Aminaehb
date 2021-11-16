@@ -1,0 +1,10 @@
+Exercise 1:
+1. Make a test.js
+   1.1 Write a small function ex: let a = 10;
+                                  let b = 10;
+                                  console.log(a+b); 
+    1.2 Answer: Run in terminal to see the answer --> node test.js 
+    1.3 Clear: cntrl c to clear or write clear
+
+Exercise 2:
+1. Make a modules.js
